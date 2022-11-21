@@ -18,7 +18,7 @@ console.log(prenom + ' ' + nom + ", comment allez vous?");
 console.log(`Bonjour! ${prenom} ${nom}, comment allez-vous!`);
 
 //1.3- Type boolean:
-let isPermis = true;
+let isPermis = false;
 let isMajeur = false;
 
 //Opérateurs logiques:
@@ -55,3 +55,61 @@ let numbers = [2, 10, 22, 15, 0, 1, 36];
 let filterNumbers = numbers.filter((nombre)=>{
     return nombre >= 10;
 });
+
+//2- Les blocs:
+
+//2.1- Les conditions:
+//2.1.1- IF/ELSE
+let isCssDone = true;
+let isHtmlDone = true;
+let isSassDone = true;
+
+if(isCssDone && isHtmlDone && isSassDone){
+    console.log("Vous avez fini le programme")
+}else{
+    console.log("Vous n'avez pas fini le programme")
+}
+
+//2.1.2- SWITCH/CASE
+let couleur = 'rouge';
+
+switch(couleur){
+    case 'fraise':
+    case 'rouge':
+        console.log('red'); 
+        break;
+    case 'bleu':
+        console.log('blue'); 
+        break;
+    default:
+        console.log('Couleur inconnue'); 
+}
+
+//2.1.3- Op ternaire:
+// condition ? Si vrai : Si faux
+
+let isConduire = isPermis ? "vous pouvez conduire" : "vous ne pouvez pas conduire"
+
+console.log(isPermis ? "vous pouvez conduire" : "vous ne pouvez pas conduire");
+
+// 2.2- Les boucles:
+
+//2.2.1- La boucle for:
+for(let i = 0; i <= 20; i = i + 2 ){
+    console.log('nombre pair: ' + i);
+}
+
+//2.2.2- La boucle while:
+let j = 0;
+while(j <= 20){
+    console.log('nombre pair: ' + j);
+    j = j + 2;
+}
+
+let leNombre;
+while(isNaN(leNombre)){
+    leNombre = prompt("Veuillez entrer un nombre");
+}
+
+
+
