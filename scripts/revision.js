@@ -343,6 +343,39 @@ document.querySelector("#validateButton").addEventListener("click",
     document.getElementById('users').appendChild(user);
 });
 
+//Exercice: d'avoir un inpur pour entrer un nombre et afficher dans la page la table de multiplication du nombre.
+
+//1. Dans le HTML: Ajouter le input et un bouton. DONE
+
+//2. Dans le JS:
+//2.1- Selectionner le bouton et surveille l'evenement clique.DONE
+document.querySelector('#tableButton').addEventListener('click', 
+(e)=>{
+    e.preventDefault();
+    
+    //2.2- On selectionne l'input pour connaitre sa valeur. DONE
+    let nombreInput = document.querySelector('#numberInput');
+    let nombre = nombreInput.value;
+
+    // let theNumber = document.querySelector('#numberInput').value;
+
+    //2.3- remplacer l'ancienne table. DONE
+    let laTable = document.getElementById('table');
+    laTable.innerHTML = '';
+
+    
+    //2.4- utiliser une boucle pour generer les ligne de la table, et pour chaque ligne l'ajouter dans le DOM. DONE
+    for(let i = 0; i <=10; i++){
+        let p = document.createElement('p');
+        p.textContent = `${i} x ${nombre} = ${i * nombre}`;
+        // p.textContent = i + " x " + nombre + " = " + (i * nombre);
+
+        laTable.appendChild(p);
+    }
+});
+
+
+
 
 
 
@@ -357,3 +390,9 @@ document.querySelector("#validateButton").addEventListener("click",
 //Exemple Bootstrap
 
 // Le Patter MVC: Model Vue Controller.
+
+
+
+
+
+
