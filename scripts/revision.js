@@ -107,9 +107,78 @@ while(j <= 20){
 }
 
 let leNombre;
-while(isNaN(leNombre)){
-    leNombre = prompt("Veuillez entrer un nombre");
+// while(isNaN(leNombre)){
+//     leNombre = prompt("Veuillez entrer un nombre");
+// }
+
+//Les fonctions:
+
+//Déclaration de la fonction
+function afficheBonjour(){
+    console.log('Bonjour Samy!');
 }
 
+//Executer la fonction
+afficheBonjour();
+
+afficheBonjour();
+
+// Déclaration de fonction paramétré
+function disBonjour(nom, prenom){
+    console.log(`Bonjour ${nom} ${prenom}!`);
+}
+
+disBonjour("Djemai", "Samy");
+disBonjour('John', "Doe");
+
+function returnBonjour(nom, prenom){
+    return `Bonjour ${nom} ${prenom}!`;
+}
+
+console.log(returnBonjour("Fred", "Potter"));
+
+//Exemple: Moyenne:
+
+function moyenne(notes){
+  let somme = 0;
+  for(let i = 0; i < notes.length; i++ ){
+    somme = somme + notes[i];
+  }
+
+  let laMoyenne = somme / notes.length;// 11
+  
+  return Math.round(laMoyenne * 100) / 100;
+}
+
+console.log(moyenne([15, 12, 7, 10, 13, 15, 6]));
+console.log(moyenne([10, 8, 12, 13, 15]));
+
+//les fonctions callbacks:
+function nombrePairs(callback){
+    for(let i = 0; i<=20; i= i + 2){
+        callback(i);
+    }
+}
+
+nombrePairs((leNombrePair)=>{
+    console.log(leNombrePair)
+})
+
+nombrePairs((leNombrePair)=>{
+    console.log("Le nombre pairs est "+ leNombrePair)
+})
+
+//Les objet et classes
+
+//Manipulation du DOM
+
+//Tuto Navbar Responsive
 
 
+//CSS:
+// Les animations et la 3D.
+// Les media query: Site responsive.
+
+// SASS:
+//Les bases
+//Exemple Bootstrap
