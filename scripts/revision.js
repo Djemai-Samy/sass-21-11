@@ -166,11 +166,133 @@ nombrePairs((leNombrePair)=>{
 
 nombrePairs((leNombrePair)=>{
     console.log("Le nombre pairs est "+ leNombrePair)
+});
+
+nombrePairs((leNombrePair)=>{
+    let p = document.createElement('p');
+    p.textContent = "Le nombre pair: "+ leNombrePair;
+    document.body.appendChild(p);
 })
 
+function myFilter(tableau, callback){
+    let filteredTab = [];
+    for( let i = 0; i < tableau.length; i++){
+        if(callback(tableau[i])){
+            filteredTab.push(tableau[i])
+        }
+    }
+    return filteredTab
+}
+
+let newTab = myFilter([2, 10, 22, 15, 0, 1, 36], (element)=>{
+    return element >=10;
+});
+
+console.log(newTab);
+
+let newTab2 = myFilter([2, 10, 22, 15, 0, 1, 36], (element)=>{
+    return element <= 10
+})
+console.log(newTab2)
+
+
+
 //Les objet et classes
+let user1 = {
+    nom:"Djemai",
+    prenom:"Samy",
+    age:29,
+    isPermis:true,
+    afficherUser: function(){
+         return `Bonjour ${this.nom} ${this.prenom}`
+    }
+}
+
+console.log(user1.age);
+
+console.log( user1.afficherUser() ) ;
+
+console.log(user1)
+
+//Les classes:
+class Utilisateur{
+    constructor(unEmail, username, age){
+        this.email = unEmail;
+        this.username = username;
+        this.age = age;
+        this.afficheUser= function(){
+            console.log(`Bonjour ${this.email} ${this.username}`)
+        }
+        this.saveToDB = function(){
+            console.log("Enregistrer l'utilisateur dans la base de données")
+        }
+    }
+}
+
+let utlisateur1 = new Utilisateur("sam@sam.com", "sam", 29);
+let utlisateur2 = new Utilisateur("john@john.com", "John", 39);
+
+console.log(utlisateur1.email);
+
+utlisateur1.afficheUser();
+
+//Exemple programmation fonctionnel
+function User(email, username, age){
+    return {
+        email:email,
+        username:username, 
+        age:age,
+        afficheUser: function(){
+            console.log(`Bonjour ${this.email} ${this.username}`)
+        }
+    }
+}
+
+let user2 = User("john@john.com", "John", 39);
+user2.afficheUser();
 
 //Manipulation du DOM
+
+console.dir(document);
+
+//Selection d'éléments avec la nom de balise
+let h1List = document.getElementsByTagName('h1');
+let h1List2 = document.querySelectorAll("h1")
+
+//Selection d'éléments avec la nom de la classe
+let paragraphelist = document.getElementsByClassName('paragraphe');
+let paragraphelist2 = document.querySelectorAll(".paragraphe")
+
+let dernierP = document.querySelector('p:last-child');
+console.log(dernierP);
+
+//Selection d'un élément avec l'id
+let p = document.getElementById('text1');
+let p2= document.querySelector("#text1");
+
+//Modifier des éléments:
+
+//Modifier les texte dans l'élément
+p.textContent = "un paragraphe intéressant!";
+
+//Modifier et interpreter des balise dans l'élément:
+p2.innerHTML = "un paragraphe <strong>intéressant!</strong>";
+
+//Modifier la balise et son contenu
+dernierP.outerHTML = '<h2>Le nombre pair: 20</h2>'
+
+//Midifier le style:
+//background-color: red;
+//camelCase:
+//backgroundColor
+//borderRadius
+
+p2.style.color = "rgb(100, 100, 100)";
+
+
+
+
+
 
 //Tuto Navbar Responsive
 
@@ -182,3 +304,5 @@ nombrePairs((leNombrePair)=>{
 // SASS:
 //Les bases
 //Exemple Bootstrap
+
+// Le Patter MVC: Model Vue Controller.
