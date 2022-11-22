@@ -1,4 +1,4 @@
-// 1- Les variables: 
+// 1- Les variables:
 
 // 1.1- Type nombre / number:
 let sam = 50;
@@ -14,7 +14,7 @@ let prenom = "Samy";
 
 //Opérateur de concatenation:
 let nom = "Djemai";
-console.log(prenom + ' ' + nom + ", comment allez vous?");
+console.log(prenom + " " + nom + ", comment allez vous?");
 console.log(`Bonjour! ${prenom} ${nom}, comment allez-vous!`);
 
 //1.3- Type boolean:
@@ -38,22 +38,21 @@ console.log(isPermis || isMajeur);
 // false || false = false
 
 //Le xor / OU exclusif:
-console.log((isPermis && !isMajeur) || (!isPermis && isMajeur))
+console.log((isPermis && !isMajeur) || (!isPermis && isMajeur));
 // true xor true = false
 // true xor false = true
 // false xor true = true
 // false || false = false
 
-
 //1.4- Type tableau/ Arrays:
-let cours = ['HTML', 'CSS',"JS"];
+let cours = ["HTML", "CSS", "JS"];
 
 console.log(cours);
 
 let numbers = [2, 10, 22, 15, 0, 1, 36];
 
-let filterNumbers = numbers.filter((nombre)=>{
-    return nombre >= 10;
+let filterNumbers = numbers.filter((nombre) => {
+  return nombre >= 10;
 });
 
 //2- Les blocs:
@@ -64,46 +63,46 @@ let isCssDone = true;
 let isHtmlDone = true;
 let isSassDone = true;
 
-if(isCssDone && isHtmlDone && isSassDone){
-    console.log("Vous avez fini le programme")
-}else{
-    console.log("Vous n'avez pas fini le programme")
+if (isCssDone && isHtmlDone && isSassDone) {
+  console.log("Vous avez fini le programme");
+} else {
+  console.log("Vous n'avez pas fini le programme");
 }
 
 //2.1.2- SWITCH/CASE
-let couleur = 'rouge';
+let couleur = "rouge";
 
-switch(couleur){
-    case 'fraise':
-    case 'rouge':
-        console.log('red'); 
-        break;
-    case 'bleu':
-        console.log('blue'); 
-        break;
-    default:
-        console.log('Couleur inconnue'); 
+switch (couleur) {
+  case "fraise":
+  case "rouge":
+    console.log("red");
+    break;
+  case "bleu":
+    console.log("blue");
+    break;
+  default:
+    console.log("Couleur inconnue");
 }
 
 //2.1.3- Op ternaire:
 // condition ? Si vrai : Si faux
 
-let isConduire = isPermis ? "vous pouvez conduire" : "vous ne pouvez pas conduire"
+let isConduire = isPermis ? "vous pouvez conduire" : "vous ne pouvez pas conduire";
 
 console.log(isPermis ? "vous pouvez conduire" : "vous ne pouvez pas conduire");
 
 // 2.2- Les boucles:
 
 //2.2.1- La boucle for:
-for(let i = 0; i <= 20; i = i + 2 ){
-    console.log('nombre pair: ' + i);
+for (let i = 0; i <= 20; i = i + 2) {
+  console.log("nombre pair: " + i);
 }
 
 //2.2.2- La boucle while:
 let j = 0;
-while(j <= 20){
-    console.log('nombre pair: ' + j);
-    j = j + 2;
+while (j <= 20) {
+  console.log("nombre pair: " + j);
+  j = j + 2;
 }
 
 let leNombre;
@@ -114,8 +113,8 @@ let leNombre;
 //Les fonctions:
 
 //Déclaration de la fonction
-function afficheBonjour(){
-    console.log('Bonjour Samy!');
+function afficheBonjour() {
+  console.log("Bonjour Samy!");
 }
 
 //Executer la fonction
@@ -124,29 +123,29 @@ afficheBonjour();
 afficheBonjour();
 
 // Déclaration de fonction paramétré
-function disBonjour(nom, prenom){
-    console.log(`Bonjour ${nom} ${prenom}!`);
+function disBonjour(nom, prenom) {
+  console.log(`Bonjour ${nom} ${prenom}!`);
 }
 
 disBonjour("Djemai", "Samy");
-disBonjour('John', "Doe");
+disBonjour("John", "Doe");
 
-function returnBonjour(nom, prenom){
-    return `Bonjour ${nom} ${prenom}!`;
+function returnBonjour(nom, prenom) {
+  return `Bonjour ${nom} ${prenom}!`;
 }
 
 console.log(returnBonjour("Fred", "Potter"));
 
 //Exemple: Moyenne:
 
-function moyenne(notes){
+function moyenne(notes) {
   let somme = 0;
-  for(let i = 0; i < notes.length; i++ ){
+  for (let i = 0; i < notes.length; i++) {
     somme = somme + notes[i];
   }
 
-  let laMoyenne = somme / notes.length;// 11
-  
+  let laMoyenne = somme / notes.length; // 11
+
   return Math.round(laMoyenne * 100) / 100;
 }
 
@@ -154,79 +153,77 @@ console.log(moyenne([15, 12, 7, 10, 13, 15, 6]));
 console.log(moyenne([10, 8, 12, 13, 15]));
 
 //les fonctions callbacks:
-function nombrePairs(callback){
-    for(let i = 0; i<=20; i= i + 2){
-        callback(i);
-    }
+function nombrePairs(callback) {
+  for (let i = 0; i <= 20; i = i + 2) {
+    callback(i);
+  }
 }
 
-nombrePairs((leNombrePair)=>{
-    console.log(leNombrePair)
-})
-
-nombrePairs((leNombrePair)=>{
-    console.log("Le nombre pairs est "+ leNombrePair)
+nombrePairs((leNombrePair) => {
+  console.log(leNombrePair);
 });
 
-nombrePairs((leNombrePair)=>{
-    let p = document.createElement('p');
-    p.textContent = "Le nombre pair: "+ leNombrePair;
-    document.body.appendChild(p);
-})
+nombrePairs((leNombrePair) => {
+  console.log("Le nombre pairs est " + leNombrePair);
+});
 
-function myFilter(tableau, callback){
-    let filteredTab = [];
-    for( let i = 0; i < tableau.length; i++){
-        if(callback(tableau[i])){
-            filteredTab.push(tableau[i])
-        }
+nombrePairs((leNombrePair) => {
+  let p = document.createElement("p");
+  p.textContent = "Le nombre pair: " + leNombrePair;
+  document.body.appendChild(p);
+});
+
+function myFilter(tableau, callback) {
+  let filteredTab = [];
+  for (let i = 0; i < tableau.length; i++) {
+    if (callback(tableau[i])) {
+      filteredTab.push(tableau[i]);
     }
-    return filteredTab
+  }
+  return filteredTab;
 }
 
-let newTab = myFilter([2, 10, 22, 15, 0, 1, 36], (element)=>{
-    return element >=10;
+let newTab = myFilter([2, 10, 22, 15, 0, 1, 36], (element) => {
+  return element >= 10;
 });
 
 console.log(newTab);
 
-let newTab2 = myFilter([2, 10, 22, 15, 0, 1, 36], (element)=>{
-    return element <= 10
-})
-console.log(newTab2)
-
-
+let newTab2 = myFilter([2, 10, 22, 15, 0, 1, 36], (element) => {
+  return element <= 10;
+});
+console.log(newTab2);
 
 //Les objet et classes
 let user1 = {
-    nom:"Djemai",
-    prenom:"Samy",
-    age:29,
-    isPermis:true,
-    afficherUser: function(){
-         return `Bonjour ${this.nom} ${this.prenom}`
-    }
-}
+  nom: "Djemai",
+  prenom: "Samy",
+  age: 29,
+  isPermis: true,
+  afficherUser: function () {
+    return `Bonjour ${this.nom} ${this.prenom}`;
+  },
+};
 
 console.log(user1.age);
 
-console.log( user1.afficherUser() ) ;
+console.log(user1.afficherUser());
 
-console.log(user1)
+console.log(user1);
 
 //Les classes:
-class Utilisateur{
-    constructor(unEmail, username, age){
-        this.email = unEmail;
-        this.username = username;
-        this.age = age;
-        this.afficheUser= function(){
-            console.log(`Bonjour ${this.email} ${this.username}`)
-        }
-        this.saveToDB = function(){
-            console.log("Enregistrer l'utilisateur dans la base de données")
-        }
-    }
+class Utilisateur {
+  constructor(unEmail, username, age) {
+    this.email = unEmail;
+    this.username = username;
+    this.age = age;
+    this.afficheUser = function () {
+      console.log(`Bonjour ${this.email} ${this.username}`);
+    };
+    this.saveToDB = function () {
+      console.log("Enregistrer l'utilisateur dans la base de données");
+    };
+  }
 }
 
 let utlisateur1 = new Utilisateur("sam@sam.com", "sam", 29);
@@ -237,15 +234,15 @@ console.log(utlisateur1.email);
 utlisateur1.afficheUser();
 
 //Exemple programmation fonctionnel
-function User(email, username, age){
-    return {
-        email:email,
-        username:username, 
-        age:age,
-        afficheUser: function(){
-            console.log(`Bonjour ${this.email} ${this.username}`)
-        }
-    }
+function User(email, username, age) {
+  return {
+    email: email,
+    username: username,
+    age: age,
+    afficheUser: function () {
+      console.log(`Bonjour ${this.email} ${this.username}`);
+    },
+  };
 }
 
 let user2 = User("john@john.com", "John", 39);
@@ -256,19 +253,19 @@ user2.afficheUser();
 console.dir(document);
 
 //Selection d'éléments avec la nom de balise
-let h1List = document.getElementsByTagName('h1');
-let h1List2 = document.querySelectorAll("h1")
+let h1List = document.getElementsByTagName("h1");
+let h1List2 = document.querySelectorAll("h1");
 
 //Selection d'éléments avec la nom de la classe
-let paragraphelist = document.getElementsByClassName('paragraphe');
-let paragraphelist2 = document.querySelectorAll(".paragraphe")
+let paragraphelist = document.getElementsByClassName("paragraphe");
+let paragraphelist2 = document.querySelectorAll(".paragraphe");
 
-let dernierP = document.querySelector('p:last-child');
+let dernierP = document.querySelector("p:last-child");
 console.log(dernierP);
 
 //Selection d'un élément avec l'id
-let p = document.getElementById('text1');
-let p2= document.querySelector("#text1");
+let p = document.getElementById("text1");
+let p2 = document.querySelector("#text1");
 
 //Modifier des éléments:
 
@@ -279,23 +276,77 @@ p.textContent = "un paragraphe intéressant!";
 p2.innerHTML = "un paragraphe <strong>intéressant!</strong>";
 
 //Modifier la balise et son contenu
-dernierP.outerHTML = '<h2>Le nombre pair: 20</h2>'
+dernierP.outerHTML = "<h2>Le nombre pair: 20</h2>";
 
 //Midifier le style:
 //background-color: red;
 //camelCase:
 //backgroundColor
 //borderRadius
-
 p2.style.color = "rgb(100, 100, 100)";
 
+//Créer des élément:
+let newP = document.createElement("p");
 
+//Modifier et ajoute du contenu
+newP.textContent = "Un paragraphe";
+newP.style.fontSize = "35px";
+
+//Ajoute dans un élément du DOM
+document.getElementById("addText").appendChild(newP);
+
+//document.getElementById('addText').appendChild(document.createElement('p'));
+
+//exemple de reponse de la DB:
+let user = {
+    email:"sam@sam.com",
+    role:"admin"
+}
+
+//afficher les input si l'utilisateur est un admin
+if(user.role ==="admin"){
+    //Créer un input
+    let inputUsername = document.createElement('input')
+    //ajouter un attribut a l'élément:
+    inputUsername.setAttribute("name", "username");
+
+    //Créer un bouton
+    let button = document.createElement('button');
+    button.id = "validateButton"
+    button.textContent = 'Valider';
+
+    //ajouter le bouton et l'input dans le form
+    document.querySelector('form').append(inputUsername);
+    document.querySelector('form').appendChild(button);
+}else{
+    let p = document.createElement('p')
+    p.textContent = "Veuillez vous connecter";
+    document.querySelector('form').append(p);
+}
+
+//Les évenements:
+document.querySelector("#validateButton").addEventListener("click", 
+(event) => {
+    //Empeche le rafraichissement de la page
+    event.preventDefault();
+
+    //selectionner l'input avec l'attribut name=username
+    let input = document.querySelector('[name="username"]');
+
+    //Créer un élément HTML paragraphe
+    let user = document.createElement('p');
+
+    //modifier le texte du paragraphe avec la valeur de l'input
+    user.textContent = input.value;
+
+    //Ajouter a la div les paragraphe
+    document.getElementById('users').appendChild(user);
+});
 
 
 
 
 //Tuto Navbar Responsive
-
 
 //CSS:
 // Les animations et la 3D.
