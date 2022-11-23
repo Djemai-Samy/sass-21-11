@@ -119,7 +119,6 @@ body{
     align-items: center;
     perspective: 800px;
     transform-style: preserve-3d;
-    transform: translateZ(-800px);
 
 }
 .face{
@@ -134,15 +133,69 @@ body{
 
 #face2{
  background-color: red;
- transform: translateZ(0px) rotateY(45deg);
+ transform: translateZ(50px);
 
 }
 
 @keyframes spin {
     0%{
-        transform: translateZ(-10px) translateX(50px) ;
+        transform: translateZ(0px) translateY(50px) translateX(100px) ;
+    }
+    50%{
+        transform: translateZ(50px) translateY(-200px) translateX(100px);
     }
     100%{
-        transform:translateZ(100px) translateX(50px);
+        transform:translateZ(100px) translateY(50px) translateX(100px);
     }
+}
+
+
+.cube{
+    perspective: 400px;
+    transform-style: preserve-3d;
+}
+.left{
+    background-color: rgba(0, 128, 0, 0.455);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    transform: rotateY(90deg) translateX(-50px);
+    transform-origin: left center;
+}
+.right{
+    background-color: rgba(255, 0, 0, 0.459);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    transform: rotateY(90deg) translateX(50px);
+    transform-origin: right center;
+}
+.front{
+    background-color: rgba(0, 0, 255, 0.322);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    transform:translateZ(50px);
+}
+.back{
+    background-color: rgba(128, 0, 128, 0.392);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    transform:translateZ(-50px);
+}
+.top{
+    background-color: rgba(255, 255, 0, 0.452);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    transform:rotateX(90deg) translateY(-100px);
+   
+}
+.bottom{
+    background-color: rgba(0, 0, 0, 0.331);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    transform:rotateX(90deg) translateY(50px);
 }
