@@ -6,7 +6,7 @@ async function getPersonnages(){
 
     //Transforme le json en type Javascript
     let personnages = await data.json();
-    console.log(personnages);
+
     //Selectionner la div qui contient les personnages
     let personnagesDiv = document.getElementById('personnages');
     
@@ -20,7 +20,5 @@ async function getPersonnages(){
         `
         personnagesDiv.appendChild(persoDiv);
     }
-
 }
-
 getPersonnages()
