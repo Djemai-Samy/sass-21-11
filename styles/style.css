@@ -1,0 +1,55 @@
+nav{
+    background-color: rgb(55, 55, 136);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand{
+    display: flex;
+    align-items: center;
+}
+
+#menuButton{
+    width: 30px;
+    height: 30px;
+    display: none;
+}
+
+#logo{
+    color:whitesmoke;
+    padding: 0 10px;
+}
+
+.menu{
+    display: flex;
+    list-style: none;
+}
+
+li > a{
+    color:whitesmoke;
+    padding: 0 15px;
+}
+
+@media (max-width: 700px){
+    #menuButton{
+        display: initial;
+        padding: 0 10px;
+    }
+    .menu{
+        position: absolute;
+        background-color: rgb(69, 69, 153);
+        flex-direction: column;
+        top:50px;
+        padding: 20px;
+        min-width: 75%;
+        min-height: 25vh;
+        left: -100%;
+    }
+
+}
+
+
+
+/* Mobile first
+    PC first */
