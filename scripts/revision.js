@@ -366,18 +366,16 @@ document.querySelector('#tableButton').addEventListener('click',
     
     //2.4- utiliser une boucle pour generer les ligne de la table, et pour chaque ligne l'ajouter dans le DOM. DONE
     for(let i = 0; i <=10; i++){
+        //Crée le paragraphe
         let p = document.createElement('p');
+        //On ajoute l'opération dans le texte du paragraphe
         p.textContent = `${i} x ${nombre} = ${i * nombre}`;
         // p.textContent = i + " x " + nombre + " = " + (i * nombre);
 
+        //ajoute le pragraphe dans la div du DOM
         laTable.appendChild(p);
     }
 });
-
-
-
-
-
 
 //Tuto Navbar Responsive
 
