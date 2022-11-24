@@ -1,20 +1,28 @@
 //Declaration de variable:
-$tailleFace: 100px;
+$tailleFace: 200px;
 $couleur:red;
 
-//Déclaration de mixins;
-@mixin cubaFace($position){
-    width: $tailleFace;
+//déclaration de mixins:
+@mixin cubaFace($lePrametreDeLaPosition){
     height: $tailleFace;
-    position: $position;
+    width: $tailleFace;
+    position: $lePrametreDeLaPosition;
 }
 
-.container{
-    background-color: rgb(224, 224, 224);
+//créer un placeholder
+%containerLayout{
+    background-color: rgb(119, 119, 119);
     height: 50vh;
 }
 
+//Si il y'a paramètre, on utilise le mixin
+//sinon on utilise le extend avec placeholder
+.container{
+   @extend %containerLayout;
+}
+
 .square{
+    //Utilisation du mixin
     @include cubaFace(relative);
     background-color: black;
     animation: changeColor 5s cubic-bezier(.73,-0.01,.21,1) infinite;
@@ -62,8 +70,7 @@ body{
 }
 
 .container3d{
-    background-color: rgb(221, 221, 221);
-    min-height: 50vh;
+    @extend %containerLayout;
     margin: 20px 0;
     display: flex;
     justify-content: center;
@@ -117,7 +124,11 @@ body{
 }
 
 .left{
-    @include cubaFace(absolute);
+    //créer un mixin avec paramètre qui remplace ces 3 lignes
+    height: $tailleFace;
+    width: $tailleFace;
+    position: absolute;
+
     background-color: rgba(0, 128, 0, 0.455);
     transform: rotateY(-90deg) translateX(calc( $tailleFace / 2 * -1));
     transform-origin: left center;
@@ -145,9 +156,7 @@ body{
    
 }
 .bottom{
-    height: $tailleFace;
-    width: $tailleFace;
-    position: absolute;
+    @include cubaFace(absolute);
     background-color: rgba(0, 0, 0, 0.331);
     transform:rotateX(90deg) translateZ(calc( $tailleFace / 2));
 }
