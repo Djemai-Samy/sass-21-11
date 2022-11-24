@@ -27,10 +27,26 @@ nav{
     transition: all 1s ease-in-out;
 }
 
+li{
+    margin: 25px;
+}
+
 li > a{
+
     color:whitesmoke;
     padding: 0 15px;
 }
+
+//le nesting:
+li{
+    margin: 25px;
+    a{
+        color:whitesmoke;
+        padding: 0 15px; 
+    }
+}
+
+
 
 @media (max-width: 700px){
     #menuButton{

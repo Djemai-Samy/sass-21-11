@@ -1,11 +1,15 @@
+//Declaration de variable:
+$tailleFace: 100px;
+$couleur:red;
+
 .container{
     background-color: rgb(224, 224, 224);
     height: 50vh;
 }
 
 .square{
-    height: 100px;
-    width: 100px;
+    height: $tailleFace;
+    width: $tailleFace;
     background-color: black;
     animation: changeColor 5s cubic-bezier(.73,-0.01,.21,1) infinite;
 }
@@ -17,7 +21,7 @@
         border-radius: 50px;
     }
     25%{
-        background-color: red;
+        background-color: $couleur;
         transform: translateX(200%) translateY(0%) rotateZ(90deg) scale(1);
         border-radius: 25px;
     }
@@ -27,7 +31,7 @@
         border-radius: 50px;
     }
     75%{
-        background-color: red;
+        background-color:  $couleur;
         transform: translateX(0%) translateY(200%) rotateZ(90deg) scale(1);
         border-radius: 25px;
     }
@@ -62,8 +66,8 @@ body{
 
 }
 .face{
-    width: 100px;
-    height: 100px;
+    width: $tailleFace;
+    height: $tailleFace;
 }
 
 #face1{
@@ -72,7 +76,7 @@ body{
 }
 
 #face2{
- background-color: red;
+ background-color:  $couleur;
  transform: translateZ(50px);
 
 }
@@ -108,46 +112,50 @@ body{
 
 .left{
     background-color: rgba(0, 128, 0, 0.455);
-    width: 100px;
-    height: 100px;
+    width: $tailleFace;
+    height: $tailleFace;
     position: absolute;
-    transform: rotateY(-90deg) translateX(-50px);
+    transform: rotateY(-90deg) translateX(calc( $tailleFace / 2 * -1));
     transform-origin: left center;
 }
 .right{
     background-color: rgba(255, 0, 0, 0.459);
-    width: 100px;
-    height: 100px;
+    width: $tailleFace;
+    height: $tailleFace;
     position: absolute;
-    transform: rotateY(90deg) translateX(50px);
+    transform: rotateY(90deg) translateX(calc($tailleFace / 2));
     transform-origin: right center;
 }
 .front{
     background-color: rgba(0, 0, 255, 0.322);
-    width: 100px;
-    height: 100px;
+    width: $tailleFace;
+    height: $tailleFace;
     position: absolute;
-    transform:translateZ(50px);
+    transform:translateZ(calc($tailleFace / 2));
 }
 .back{
     background-color: rgba(128, 0, 128, 0.392);
-    width: 100px;
-    height: 100px;
+    width:$tailleFace;
+    height: $tailleFace;
     position: absolute;
-    transform:translateZ(-50px) rotateY(180deg);
+    transform:translateZ(calc( $tailleFace / 2 * -1)) rotateY(180deg);
 }
 .top{
     background-color: rgba(255, 255, 0, 0.452);
-    width: 100px;
-    height: 100px;
+    width: $tailleFace;
+    height: $tailleFace;
     position: absolute;
-    transform:rotateX(90deg) translateZ(50px);
+    transform:rotateX(90deg) translateZ(calc( $tailleFace / 2));
    
 }
 .bottom{
     background-color: rgba(0, 0, 0, 0.331);
-    width: 100px;
-    height: 100px;
+    width: $tailleFace;
+    height: $tailleFace;
     position: absolute;
-    transform:rotateX(90deg) translateZ(50px);
+    transform:rotateX(90deg) translateZ(calc( $tailleFace / 2));
 }
+
+//Exercice:
+// - Creer une variable scss 'couleur' avec comme valeur la couleur rouge
+// - Remplacer toute les couleur rouge par la variable

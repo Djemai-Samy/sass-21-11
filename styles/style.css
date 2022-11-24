@@ -27,7 +27,19 @@ nav {
   transition: all 1s ease-in-out;
 }
 
+li {
+  margin: 25px;
+}
+
 li > a {
+  color: whitesmoke;
+  padding: 0 15px;
+}
+
+li {
+  margin: 25px;
+}
+li a {
   color: whitesmoke;
   padding: 0 15px;
 }
