@@ -45,7 +45,7 @@ li a {
   transition: all 0.2s ease-in-out;
 }
 .goodButton:hover {
-  background-color: red;
+  background-color: #99afef;
 }
 
 @media (max-width: 700px) {
@@ -76,8 +76,8 @@ li a {
 }
 
 .square {
-  height: 200px;
-  width: 200px;
+  height: 100px;
+  width: 100px;
   position: relative;
   background-color: black;
   animation: changeColor 5s cubic-bezier(0.73, -0.01, 0.21, 1) infinite;
@@ -131,8 +131,8 @@ body {
 }
 
 .face {
-  width: 200px;
-  height: 200px;
+  width: 100px;
+  height: 100px;
 }
 
 #face1 {
@@ -172,53 +172,55 @@ body {
   }
 }
 .left {
-  height: 200px;
-  width: 200px;
+  height: 100px;
+  width: 100px;
   position: absolute;
   background-color: rgba(0, 128, 0, 0.455);
-  transform: rotateY(-90deg) translateX(-100px);
+  transform: rotateY(-90deg) translateX(-50px);
+  transform: rotateY(-90deg) translateX(-50px);
   transform-origin: left center;
 }
 
 .right {
-  height: 200px;
-  width: 200px;
+  height: 100px;
+  width: 100px;
   position: absolute;
   background-color: rgba(255, 0, 0, 0.459);
-  transform: rotateY(90deg) translateX(100px);
+  transform: rotateY(90deg) translateX(50px);
+  transform: rotateY(90deg) translateX(50px);
   transform-origin: right center;
 }
 
 .front {
-  height: 200px;
-  width: 200px;
+  height: 100px;
+  width: 100px;
   position: absolute;
   background-color: rgba(0, 0, 255, 0.322);
-  transform: translateZ(100px);
+  transform: translateZ(50px);
 }
 
 .back {
-  height: 200px;
-  width: 200px;
+  height: 100px;
+  width: 100px;
   position: absolute;
   background-color: rgba(128, 0, 128, 0.392);
-  transform: translateZ(-100px) rotateY(180deg);
+  transform: translateZ(-50px) rotateY(180deg);
 }
 
 .top {
-  height: 200px;
-  width: 200px;
+  height: 100px;
+  width: 100px;
   position: absolute;
   background-color: rgba(255, 255, 0, 0.452);
-  transform: rotateX(90deg) translateZ(100px);
+  transform: rotateX(90deg) translateZ(50px);
 }
 
 .bottom {
-  height: 200px;
-  width: 200px;
+  height: 100px;
+  width: 100px;
   position: absolute;
   background-color: rgba(0, 0, 0, 0.331);
-  transform: rotateX(90deg) translateZ(100px);
+  transform: rotateX(90deg) translateZ(50px);
 }
 
 /*# sourceMappingURL=style.css.map */

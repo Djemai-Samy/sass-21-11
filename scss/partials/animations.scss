@@ -1,5 +1,5 @@
 //Declaration de variable:
-$tailleFace: 200px;
+$tailleFace: 100px;
 $couleur:red;
 
 //déclaration de mixins:
@@ -17,6 +17,12 @@ $couleur:red;
 
 //Si il y'a paramètre, on utilise le mixin
 //sinon on utilise le extend avec placeholder
+
+//Declarer une fonction:
+@function half($taille){
+    @return calc($taille / 2);
+}
+
 .container{
    @extend %containerLayout;
 }
@@ -76,7 +82,6 @@ body{
     justify-content: center;
     align-items: center;
     perspective: 800px;
-
 }
 .face{
     width: $tailleFace;
@@ -123,6 +128,34 @@ body{
     }
 }
 
+@function face($orientation){
+    @if($orientation == left){
+        @return rotateY(-90deg) translateX(half($tailleFace) * -1);
+    }
+
+    @if($orientation == right){
+        @return rotateY(90deg) translateX(half($tailleFace));
+    }
+    
+    @if($orientation == front){
+        @return translateZ(half($tailleFace));
+    }
+
+    @if($orientation == back){
+        @return translateZ(half($tailleFace) * -1) rotateY(180deg);
+    }
+
+    @if($orientation == top){
+        @return rotateX(90deg) translateZ(half($tailleFace));
+    }
+
+    @if($orientation == bottom){
+        @return rotateX(90deg) translateZ(half($tailleFace));
+    }
+}
+
+//Refactorisation
+
 .left{
     //créer un mixin avec paramètre qui remplace ces 3 lignes
     height: $tailleFace;
@@ -130,35 +163,37 @@ body{
     position: absolute;
 
     background-color: rgba(0, 128, 0, 0.455);
-    transform: rotateY(-90deg) translateX(calc( $tailleFace / 2 * -1));
+    transform: rotateY(-90deg) translateX(half($tailleFace) * -1);
+    transform: face(left);
     transform-origin: left center;
 }
 .right{
     @include cubaFace(absolute);
     background-color: rgba(255, 0, 0, 0.459);
-    transform: rotateY(90deg) translateX(calc($tailleFace / 2));
+    transform: rotateY(90deg) translateX(half($tailleFace));
+    transform: face(right);
     transform-origin: right center;
 }
 .front{
     @include cubaFace(absolute);
     background-color: rgba(0, 0, 255, 0.322);
-    transform:translateZ(calc($tailleFace / 2));
+    transform:face(front);
 }
 .back{
     @include cubaFace(absolute);
     background-color: rgba(128, 0, 128, 0.392);
-    transform:translateZ(calc( $tailleFace / 2 * -1)) rotateY(180deg);
+    transform:face(back);
 }
 .top{
     @include cubaFace(absolute);
     background-color: rgba(255, 255, 0, 0.452);
-    transform:rotateX(90deg) translateZ(calc( $tailleFace / 2));
+    transform:face(top);
    
 }
 .bottom{
     @include cubaFace(absolute);
     background-color: rgba(0, 0, 0, 0.331);
-    transform:rotateX(90deg) translateZ(calc( $tailleFace / 2));
+    transform:face(bottom);
 }
 
 //Exercice:

@@ -39,15 +39,17 @@ li{
     }
 }
 
+
+$primary: royalblue;
 .goodButton{
-    background-color: royalblue;
+    background-color: $primary;
     color:whitesmoke;
     border: none;
     padding: 10px;
     border-radius: 5px;
     transition: all 0.2s ease-in-out;
     &:hover{
-        background-color: red;
+        background-color: lighten($primary, 20%)
     }
 }
 
@@ -79,3 +81,4 @@ li{
 
 /* Mobile first
     PC first */
+
