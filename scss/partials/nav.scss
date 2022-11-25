@@ -51,7 +51,17 @@ $primary: royalblue;
     &:hover{
         background-color: lighten($primary, 20%)
     }
+
+    
 }
+
+.goodButton::before{
+    height:50px;
+    width: 50px;
+    background-color: red;
+}
+
+
 
 
 

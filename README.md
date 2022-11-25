@@ -21,3 +21,11 @@ se mettre dans le bon dossier (sass-21-11) avec le terminal:
 ## Créer un fichier
 
 ```touch [le nom du fichier]```
+
+## Lancer la watch de sass
+
+```sass --watch [chemin du fichier scss] [chemin du fichier css]```
+
+```sass --watch ./scss/style.scss ./styles/style.css```
+
+
