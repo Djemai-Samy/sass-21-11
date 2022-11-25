@@ -1,8 +1,21 @@
 //Variables
+@import "./variables/colors.scss";
 
+//utilities
+@import "./utilities/bg.scss";
+@import "./utilities/text.scss";
 //Partials
 @import './partials/nav.scss';
 
 @import './partials/animations.scss';
 
-@debug 'salut';
+
+//Exercice:
+//Utiliser la boucles sass pour créer les classes:
+
+//.text-primary{}
+//.text-secondary{}
+//......
+//.text-purple{}
+
+//Envoyer: text.scss

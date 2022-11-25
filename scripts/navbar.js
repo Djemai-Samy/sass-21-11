@@ -19,6 +19,9 @@ nav.innerHTML = `
         <li>
           <a href="./animations.html">Animations</a>
         </li>
+        <li>
+          <a href="./showcase.html">Showcase</a>
+        </li>
     </ul>
 `
 

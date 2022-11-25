@@ -1,0 +1,18 @@
+
+@each $cle, $valeur in $colors{
+    .bg-#{$cle}{
+        background-color: $valeur;
+    }
+
+    @for $i from 1 through 3{
+        .bg-#{$cle}-dark-#{$i}{
+            // background-color: darken($valeur, percentage($i * 0.05));
+            background-color: mix($valeur, rgb(24, 24, 24), $i * 30);
+        }
+        .bg-#{$cle}-light-#{$i}{
+            // background-color: lighten($valeur, percentage($i * 0.05));
+            background-color: mix($valeur, white, $i * 30);
+        }
+    }
+}
+ 

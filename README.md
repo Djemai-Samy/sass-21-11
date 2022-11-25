@@ -28,4 +28,6 @@ se mettre dans le bon dossier (sass-21-11) avec le terminal:
 
 ```sass --watch ./scss/style.scss ./styles/style.css```
 
+## Lancer le script bash pour watch:
 
+```./watch.sh```
