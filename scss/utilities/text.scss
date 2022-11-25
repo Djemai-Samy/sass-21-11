@@ -3,4 +3,15 @@
     .text-#{$key}{
         color:$value;
     }
+
+    @for $i from 1 through 4{
+        .text-#{$key}-dark-#{$i}{
+            color: mix($value, black, $i * 25)
+        }
+
+        .text-#{$key}-light-#{$i}{
+            color: mix($value, white, $i * 25)
+        }
+    }
+
 }

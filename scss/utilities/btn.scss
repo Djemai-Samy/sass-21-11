@@ -1,0 +1,57 @@
+
+@mixin textLightness($couleur) {
+    @if(lightness($couleur) < 53%){
+        color:white;
+    }@else{
+        color: black;
+    }
+}
+
+
+.btn{
+    padding: 10px;
+    outline: none;
+    border: none;
+    min-width: 75px;
+    border-radius: 5px;
+    font-size: large;
+    transition: all 0.2s ease-in-out;
+}
+
+@each $key, $val in $colors {
+    .btn-#{$key}{
+        background-color: $val;
+        
+        @include textLightness($val);
+        &:hover{
+            @if(lightness($val) > 80%){
+                background-color: darken($val, 15%);
+            }@else{
+                background-color: lighten($val, 15%);
+            }
+        }
+    }
+
+    .btn-outline-#{$key}{
+        background-color: transparent;
+        border: solid 1px $val;
+        color:$val;
+
+        &:hover{
+            background-color: $val;
+            @include textLightness($val);
+        }
+
+        @if(lightness($val) > 90%){
+            color: black;
+            border:solid 1px black;
+        }
+    }
+
+}
+
+//Exercice:
+//Dans la boucle, créer les classes et le hover:
+// .btn-outline-primary{}
+// .....
+// .btn-outline-white{}

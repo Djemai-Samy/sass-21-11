@@ -4,13 +4,14 @@
 //utilities
 @import "./utilities/bg.scss";
 @import "./utilities/text.scss";
+@import "./utilities/btn.scss";
 //Partials
 @import './partials/nav.scss';
 
 @import './partials/animations.scss';
 
 
-//Exercice:
+//Exercice 1:
 //Utiliser la boucles sass pour créer les classes:
 
 //.text-primary{}
@@ -19,3 +20,13 @@
 //.text-purple{}
 
 //Envoyer: text.scss
+
+//Exercice 2:
+// Utiliser la boucle for, pour ajouter les classes:
+//.text-primary-dark-1{}
+//.....
+//.text-primary-dark-4{}
+
+//.text-primary-light-1{}
+//.....
+//.text-primary-light-4{}

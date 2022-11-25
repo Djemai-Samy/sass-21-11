@@ -226,11 +226,107 @@
   color: rgb(69, 102, 199);
 }
 
+.text-primary-dark-1 {
+  color: #111a32;
+}
+
+.text-primary-light-1 {
+  color: #d1d9f1;
+}
+
+.text-primary-dark-2 {
+  color: #233364;
+}
+
+.text-primary-light-2 {
+  color: #a2b3e3;
+}
+
+.text-primary-dark-3 {
+  color: #344d95;
+}
+
+.text-primary-light-3 {
+  color: #748cd5;
+}
+
+.text-primary-dark-4 {
+  color: #4566c7;
+}
+
+.text-primary-light-4 {
+  color: #4566c7;
+}
+
 .text-secondary {
   color: rgb(203, 103, 32);
 }
 
+.text-secondary-dark-1 {
+  color: #331a08;
+}
+
+.text-secondary-light-1 {
+  color: #f2d9c7;
+}
+
+.text-secondary-dark-2 {
+  color: #663410;
+}
+
+.text-secondary-light-2 {
+  color: #e5b390;
+}
+
+.text-secondary-dark-3 {
+  color: #984d18;
+}
+
+.text-secondary-light-3 {
+  color: #d88d58;
+}
+
+.text-secondary-dark-4 {
+  color: #cb6720;
+}
+
+.text-secondary-light-4 {
+  color: #cb6720;
+}
+
 .text-success {
+  color: green;
+}
+
+.text-success-dark-1 {
+  color: #002000;
+}
+
+.text-success-light-1 {
+  color: #bfdfbf;
+}
+
+.text-success-dark-2 {
+  color: #004000;
+}
+
+.text-success-light-2 {
+  color: #80c080;
+}
+
+.text-success-dark-3 {
+  color: #006000;
+}
+
+.text-success-light-3 {
+  color: #40a040;
+}
+
+.text-success-dark-4 {
+  color: green;
+}
+
+.text-success-light-4 {
   color: green;
 }
 
@@ -238,7 +334,71 @@
   color: red;
 }
 
+.text-danger-dark-1 {
+  color: #400000;
+}
+
+.text-danger-light-1 {
+  color: #ffbfbf;
+}
+
+.text-danger-dark-2 {
+  color: maroon;
+}
+
+.text-danger-light-2 {
+  color: #ff8080;
+}
+
+.text-danger-dark-3 {
+  color: #bf0000;
+}
+
+.text-danger-light-3 {
+  color: #ff4040;
+}
+
+.text-danger-dark-4 {
+  color: red;
+}
+
+.text-danger-light-4 {
+  color: red;
+}
+
 .text-warning {
+  color: orange;
+}
+
+.text-warning-dark-1 {
+  color: #402900;
+}
+
+.text-warning-light-1 {
+  color: #ffe9bf;
+}
+
+.text-warning-dark-2 {
+  color: #805300;
+}
+
+.text-warning-light-2 {
+  color: #ffd280;
+}
+
+.text-warning-dark-3 {
+  color: #bf7c00;
+}
+
+.text-warning-light-3 {
+  color: #ffbc40;
+}
+
+.text-warning-dark-4 {
+  color: orange;
+}
+
+.text-warning-light-4 {
   color: orange;
 }
 
@@ -246,12 +406,264 @@
   color: purple;
 }
 
+.text-purple-dark-1 {
+  color: #200020;
+}
+
+.text-purple-light-1 {
+  color: #dfbfdf;
+}
+
+.text-purple-dark-2 {
+  color: #400040;
+}
+
+.text-purple-light-2 {
+  color: #c080c0;
+}
+
+.text-purple-dark-3 {
+  color: #600060;
+}
+
+.text-purple-light-3 {
+  color: #a040a0;
+}
+
+.text-purple-dark-4 {
+  color: purple;
+}
+
+.text-purple-light-4 {
+  color: purple;
+}
+
 .text-white {
+  color: whitesmoke;
+}
+
+.text-white-dark-1 {
+  color: #3d3d3d;
+}
+
+.text-white-light-1 {
+  color: #fdfdfd;
+}
+
+.text-white-dark-2 {
+  color: #7b7b7b;
+}
+
+.text-white-light-2 {
+  color: #fafafa;
+}
+
+.text-white-dark-3 {
+  color: #b8b8b8;
+}
+
+.text-white-light-3 {
+  color: #f8f8f8;
+}
+
+.text-white-dark-4 {
+  color: whitesmoke;
+}
+
+.text-white-light-4 {
   color: whitesmoke;
 }
 
 .text-black {
   color: rgb(24, 24, 24);
+}
+
+.text-black-dark-1 {
+  color: #060606;
+}
+
+.text-black-light-1 {
+  color: #c5c5c5;
+}
+
+.text-black-dark-2 {
+  color: #0c0c0c;
+}
+
+.text-black-light-2 {
+  color: #8c8c8c;
+}
+
+.text-black-dark-3 {
+  color: #121212;
+}
+
+.text-black-light-3 {
+  color: #525252;
+}
+
+.text-black-dark-4 {
+  color: #181818;
+}
+
+.text-black-light-4 {
+  color: #181818;
+}
+
+.btn {
+  padding: 10px;
+  outline: none;
+  border: none;
+  min-width: 75px;
+  border-radius: 5px;
+  font-size: large;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-primary {
+  background-color: rgb(69, 102, 199);
+  color: white;
+}
+.btn-primary:hover {
+  background-color: #8096d9;
+}
+
+.btn-outline-primary {
+  background-color: transparent;
+  border: solid 1px rgb(69, 102, 199);
+  color: rgb(69, 102, 199);
+}
+.btn-outline-primary:hover {
+  background-color: rgb(69, 102, 199);
+  color: white;
+}
+
+.btn-secondary {
+  background-color: rgb(203, 103, 32);
+  color: white;
+}
+.btn-secondary:hover {
+  background-color: #e49054;
+}
+
+.btn-outline-secondary {
+  background-color: transparent;
+  border: solid 1px rgb(203, 103, 32);
+  color: rgb(203, 103, 32);
+}
+.btn-outline-secondary:hover {
+  background-color: rgb(203, 103, 32);
+  color: white;
+}
+
+.btn-success {
+  background-color: green;
+  color: white;
+}
+.btn-success:hover {
+  background-color: #00cd00;
+}
+
+.btn-outline-success {
+  background-color: transparent;
+  border: solid 1px green;
+  color: green;
+}
+.btn-outline-success:hover {
+  background-color: green;
+  color: white;
+}
+
+.btn-danger {
+  background-color: red;
+  color: white;
+}
+.btn-danger:hover {
+  background-color: #ff4d4d;
+}
+
+.btn-outline-danger {
+  background-color: transparent;
+  border: solid 1px red;
+  color: red;
+}
+.btn-outline-danger:hover {
+  background-color: red;
+  color: white;
+}
+
+.btn-warning {
+  background-color: orange;
+  color: white;
+}
+.btn-warning:hover {
+  background-color: #ffc04d;
+}
+
+.btn-outline-warning {
+  background-color: transparent;
+  border: solid 1px orange;
+  color: orange;
+}
+.btn-outline-warning:hover {
+  background-color: orange;
+  color: white;
+}
+
+.btn-purple {
+  background-color: purple;
+  color: white;
+}
+.btn-purple:hover {
+  background-color: #cd00cd;
+}
+
+.btn-outline-purple {
+  background-color: transparent;
+  border: solid 1px purple;
+  color: purple;
+}
+.btn-outline-purple:hover {
+  background-color: purple;
+  color: white;
+}
+
+.btn-white {
+  background-color: whitesmoke;
+  color: black;
+}
+.btn-white:hover {
+  background-color: #cfcfcf;
+}
+
+.btn-outline-white {
+  background-color: transparent;
+  border: solid 1px whitesmoke;
+  color: whitesmoke;
+  color: black;
+  border: solid 1px black;
+}
+.btn-outline-white:hover {
+  background-color: whitesmoke;
+  color: black;
+}
+
+.btn-black {
+  background-color: rgb(24, 24, 24);
+  color: white;
+}
+.btn-black:hover {
+  background-color: #3e3e3e;
+}
+
+.btn-outline-black {
+  background-color: transparent;
+  border: solid 1px rgb(24, 24, 24);
+  color: rgb(24, 24, 24);
+}
+.btn-outline-black:hover {
+  background-color: rgb(24, 24, 24);
+  color: white;
 }
 
 nav {
